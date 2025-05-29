@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import About from './components/About';
+import Navbar from './components/Navbar';
+import TextForm from './components/TextForm';
+import TextForm2 from './components/TextForm2';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar title="Textutils" aboutText="About" />
+      <div className="container">
+        <TextForm  heading="Enter any text below and perform certain action click below button." /> 
+        {/* <TextForm2 heading="Enter any text below to convert it to LowerCase" />  */}
+        <About/>
+      </div>
+    </>   
   );
+ 
 }
 
 export default App;
